@@ -21,11 +21,11 @@ for file in files:
             shingles.add(shingle)
         sketch = set()
         for i in range(sketchSize):
-            min = sys.maxsize
+            minh = sys.maxsize
             for shingle in shingles:
-                if abs(hash(shingle + str(i))) < min:
-                    min = abs(hash(shingle + str(i)))
-            sketch.add(min)
+                if abs(hash(shingle + str(i))) < minh:
+                    minh = abs(hash(shingle + str(i)))
+            sketch.add(minh)
         fileToSketch[file] = sketch
 
 probs = []
